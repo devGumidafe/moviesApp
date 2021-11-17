@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import "../../scss/button.scss";
 
 export const Button = (props) => {
   return (
