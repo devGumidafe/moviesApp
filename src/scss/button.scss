@@ -1,7 +1,7 @@
 @use "./index" as *;
 
 button {
-  position: cursor;
+  cursor:pointer;
   font-family: $font-family;
 }
 

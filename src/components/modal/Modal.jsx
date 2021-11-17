@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import PropTypes from "prop-types";
+/* import PropTypes from "prop-types"; */
 import "../../scss/modal.scss";
-import { useRef } from "react/cjs/react.production.min";
+import { useRef } from "react";
 
 export const Modal = (props) => {
   const [active, setActive] = useState(false);
@@ -20,7 +20,7 @@ export const Modal = (props) => {
 export const ModalContent = (props) => {
   const contentRef = useRef(null);
   const closeModal = () => {
-    contentRef.current.parentNode.classLis.remove("active");
+    contentRef.current.parentNode.classList.remove("active");
 
     if (props.onClose) props.onClose();
   };
@@ -35,6 +35,6 @@ export const ModalContent = (props) => {
   );
 };
 
-ModalContent.propTypes = {
+/* ModalContent.propTypes = {
   onClose: PropTypes.func,
-};
+}; */
