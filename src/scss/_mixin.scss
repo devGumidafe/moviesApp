@@ -1,7 +1,8 @@
-@mixin flex($align-item, $justify-content) {
+@mixin flex($align-item, $justify-content, $gap) {
   display: flex;
   align-items: $align-item;
   justify-content: $justify-content;
+  gap: $gap;
 }
 
 @mixin overlay {
