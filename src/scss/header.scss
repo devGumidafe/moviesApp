@@ -81,6 +81,6 @@
     width: 50px;
     margin-right: 0;
 
-    @include flex(center, center, 1rem);
+    @include flex(center, flex-end, 1rem);
   }
 }
