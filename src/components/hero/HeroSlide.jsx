@@ -19,7 +19,7 @@ export const HeroSlide = () => {
           params,
         });
         const { results } = response;
-        setMovieItems(results.slice(1, 4));
+        setMovieItems(results.slice(0, 5));
       } catch (error) {
         console.log(error);
       }
@@ -41,7 +41,7 @@ export const HeroSlide = () => {
             {({ isActive }) => (
               <HeroSlideItem
                 movie={movie}
-                className={`${isActive ? 'active' : ''}`}
+                className={`${isActive ? "active" : ""}`}
               />
             )}
           </SwiperSlide>
