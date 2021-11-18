@@ -8,7 +8,7 @@ import { Header } from "../components/header/Header";
 export const AppRouter = () => {
   return (
     <>
-      <Footer />
+      <Header />
 
       <Routes>
         <Route path=":category/search/:keyword" element={<Catalog />} />
@@ -17,7 +17,7 @@ export const AppRouter = () => {
         <Route path="/" element={<Home />} />
       </Routes>
 
-      <Header />
+      <Footer />
     </>
   );
 };
