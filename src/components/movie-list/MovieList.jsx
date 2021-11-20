@@ -1,10 +1,7 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 // import PropTypes from 'prop-types';
 import { tmdbApi, category } from "../../api/tmdbApi";
-import { apiConfig } from "../../api/apiConfig";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Button } from "../buttons/Button";
 import { MovieCard } from "../movie-card/MovieCard";
 import "../../scss/movie-list.scss";
 
@@ -19,10 +16,10 @@ export const MovieList = (props) => {
       if (props.type !== "similar") {
         switch (props.category) {
           case category.movie:
-            response = await tmdbApi.getMoviesList(props.type, { params: {} });
+            response = await tmdbApi.getMoviesList(props.type, { params });
             break;
           default:
-            response = await tmdbApi.getTvList(props.type, { params: {} });
+            response = await tmdbApi.getTvList(props.type, { params });
         }
       } else {
         response = await tmdbApi.similar(props.category, props.id);
@@ -39,7 +36,7 @@ export const MovieList = (props) => {
       <Swiper grabCursor={true} spaceBetween={10} slidesPerView={"auto"}>
         {movies.map((movie, i) => (
           <SwiperSlide key={i}>
-            <MovieCard movie={movie} category={props.category}/>
+            <MovieCard movie={movie} category={props.category} />
           </SwiperSlide>
         ))}
       </Swiper>
