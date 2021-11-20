@@ -46,7 +46,7 @@ export const NavBar = () => {
       <div className="header__wrap container">
         <div className="logo">
           <img src={logo} alt="Logo moviesApp" />
-          <Link to="/">MoviesApp</Link>
+          <Link to="/">goMovie</Link>
         </div>
         <ul className="header__nav">
           {headerNav.map((nav, i) => (
