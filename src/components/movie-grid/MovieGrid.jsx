@@ -123,7 +123,7 @@ const MovieSearch = (props) => {
     <div className="movie-search">
       <Input
         type="text"
-        placeholder="Busca en goMovie..."
+        placeholder="Busca en goMovies..."
         value={keyword}
         onChange={(e) => setKeyword(e.target.value)}
       />
