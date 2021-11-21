@@ -74,14 +74,18 @@ export const MovieGrid = (props) => {
         <MovieSearch category={props.category} keyword={keyword} />
       </div>
       <div className="movie-grid">
-        {movies.map((movie, i) => (
-          <MovieCard category={props.category} movie={movie} key={i} />
-        ))}
+        {movies.length > 0 ? (
+          movies.map((movie, i) => (
+            <MovieCard category={props.category} movie={movie} key={i} />
+          ))
+        ) : (
+          <h3>Lo sentimos no hay resultados...</h3>
+        )}
       </div>
       {page < totalPage ? (
         <div className="movie-grid__loadmore">
           <OutlineButton className="small" onClick={loadMore}>
-            Load more
+            Cargar más
           </OutlineButton>
         </div>
       ) : null}
@@ -119,13 +123,13 @@ const MovieSearch = (props) => {
     <div className="movie-search">
       <Input
         type="text"
-        placeholder="Enter keywork"
+        placeholder="Busca en goMovie..."
         value={keyword}
         onChange={(e) => setKeyword(e.target.value)}
       />
 
       <Button className="small" onClick={goToSearch}>
-        Search
+        Buscar
       </Button>
     </div>
   );

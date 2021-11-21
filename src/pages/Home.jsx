@@ -11,9 +11,9 @@ export const Home = () => {
       <div className="container">
         <div className="section mb-3">
           <div className="section__header mb-2">
-            <h2 className="section__title">Trending Movies</h2>
+            <h2 className="section__title">Trending Películas</h2>
             <Link to="/movie">
-              <OutlineButton>View more</OutlineButton>
+              <OutlineButton>Ver más</OutlineButton>
             </Link>
           </div>
           <MovieList category={category.movie} type={movieType.popular} />
@@ -21,9 +21,9 @@ export const Home = () => {
 
         <div className="section mb-3">
           <div className="section__header mb-2">
-            <h2 className="section__title">Top Rated Movies</h2>
+            <h2 className="section__title">Top Películas</h2>
             <Link to="/movie">
-              <OutlineButton>View more</OutlineButton>
+              <OutlineButton>Ver más</OutlineButton>
             </Link>
           </div>
           <MovieList category={category.movie} type={movieType.top_rated} />
@@ -33,7 +33,7 @@ export const Home = () => {
           <div className="section__header mb-2">
             <h2 className="section__title">Trending Series</h2>
             <Link to="/tv">
-              <OutlineButton>View more</OutlineButton>
+              <OutlineButton>Ver más</OutlineButton>
             </Link>
           </div>
           <MovieList category={category.tv} type={tvType.popular} />
@@ -41,9 +41,9 @@ export const Home = () => {
 
         <div className="section mb-3">
           <div className="section__header mb-2">
-            <h2 className="section__title">Top Rated Series</h2>
+            <h2 className="section__title">Top Series</h2>
             <Link to="/tv">
-              <OutlineButton>View more</OutlineButton>
+              <OutlineButton>Ver más</OutlineButton>
             </Link>
           </div>
           <MovieList category={category.tv} type={tvType.top_rated} />

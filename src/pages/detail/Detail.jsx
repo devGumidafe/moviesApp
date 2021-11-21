@@ -44,7 +44,7 @@ export const Detail = () => {
                             <p className="overview">{movie.overview}</p>
                             <div className="cast">
                                 <div className="section__header">
-                                    <h2>Casts</h2>
+                                    <h2>Reparto</h2>
                                 </div>
                                 <CastList id={movie.id}/>
                             </div>
@@ -56,7 +56,7 @@ export const Detail = () => {
                         </div>
                         <div className="section mb-3">
                             <div className="section__header mb-2">
-                                <h2>Similar</h2>
+                                <h2>Similares</h2>
                             </div>
                             <MovieList category={category} type="similar" id={movie.id}/>
                         </div>

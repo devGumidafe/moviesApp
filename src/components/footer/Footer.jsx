@@ -16,21 +16,21 @@ export const Footer = () => {
         <div className="footer__content__menus">
           <div className="footer__content__menu">
             <Link to="/">Home</Link>
-            <Link to="/">Contact us</Link>
-            <Link to="/">Term of services</Link>
-            <Link to="/">About us</Link>
+            <Link to="/">Contáctanos</Link>
+            <Link to="/">Términos de uso</Link>
+            <Link to="/">Preguntas frecuentes</Link>
           </div>
 
           <div className="footer__content__menu">
             <Link to="/">Live</Link>
-            <Link to="/">FAQ</Link>
-            <Link to="/">Premium</Link>
-            <Link to="/">Privacy policy</Link>
+            <Link to="/">Centro de ayuda</Link>
+            <Link to="/">Cuenta</Link>
+            <Link to="/">Privacidad</Link>
           </div>
 
           <div className="footer__content__menu">
-            <Link to="/">You must watch</Link>
-            <Link to="/">Recent release</Link>
+            <Link to="/">Formas de ver</Link>
+            <Link to="/">Avisos legales</Link>
             <Link to="/">Top IMDB</Link>
           </div>
         </div>

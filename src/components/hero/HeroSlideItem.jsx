@@ -39,9 +39,9 @@ export const HeroSlideItem = (props) => {
           <div className="overview">{movie.overview}</div>
           <div className="btns">
             <Button onClick={() => navigate(`/movie/${movie.id}`)}>
-              Watch now
+              Más info
             </Button>
-            <OutlineButton onClick={setModalActive}>Watch trailer</OutlineButton>
+            <OutlineButton onClick={setModalActive}>Ver trailer</OutlineButton>
           </div>
         </div>
         <div className="hero-slide__item__content__poster">
