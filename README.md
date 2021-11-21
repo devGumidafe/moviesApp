@@ -1,4 +1,5 @@
-# MoviesApp
+# goMovie
+App web responsive en react, que consume la api de www.themoviedb.org
 
 ## Comenzando 🚀
 
@@ -12,3 +13,7 @@ npm install
 
 - **Gumidafe Socorro** - (https://github.com/devGumidafe)
 - **Web** - (https://www.gumidev.com)
+
+
+## Demo
+[Demo APP](http://gomovies.gumidev.com)

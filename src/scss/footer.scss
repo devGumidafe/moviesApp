@@ -31,3 +31,15 @@
     }
   }
 }
+
+.footer__fixed {
+  background-color: $body-bg;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-family: monospace;
+}
