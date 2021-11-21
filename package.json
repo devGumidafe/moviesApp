@@ -1,7 +1,7 @@
 {
-  "name": "semilla-webpack",
+  "name": "gomovies",
   "version": "1.0.0",
-  "description": "Proyecto semilla webpack react",
+  "description": "Proyecto react responsive goMovies",
   "main": "index.jsx",
   "scripts": {
     "start": "webpack serve --mode development",
