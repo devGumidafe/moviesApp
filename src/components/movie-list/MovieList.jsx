@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-// import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import { tmdbApi, category } from "../../api/tmdbApi";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { MovieCard } from "../movie-card/MovieCard";
@@ -44,8 +44,7 @@ export const MovieList = (props) => {
   );
 };
 
-/* MovieList.propTypes = {
-    category: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
-}
- */
+MovieList.propTypes = {
+  category: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+};

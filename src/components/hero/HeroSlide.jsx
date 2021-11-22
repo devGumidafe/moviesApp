@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import SwiperCore, { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { tmdbApi, category, movieType, tvType } from "../../api/tmdbApi";
+import { tmdbApi, movieType } from "../../api/tmdbApi";
 import { HeroSlideItem } from "./HeroSlideItem";
 import { TrailerModal } from "../modal/TrailerModal";
 import "../../scss/hero-slide.scss";
@@ -21,7 +21,7 @@ export const HeroSlide = () => {
         const { results } = response;
         setMovieItems(results.slice(0, 5));
       } catch (error) {
-        console.log(error);
+        throw error;
       }
     };
     getMovies();

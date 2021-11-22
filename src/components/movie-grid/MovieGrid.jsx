@@ -1,14 +1,13 @@
-import { useState, useEffect, useCallback } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { MovieCard } from "../movie-card/MovieCard";
 import { category, movieType, tmdbApi, tvType } from "../../api/tmdbApi";
-import { OutlineButton, Button } from "../buttons/Button";
-import { Input } from "../input/Input";
+import { OutlineButton } from "../buttons/Button";
 import "../../scss/movie-grid.scss";
+import { MovieSearch } from "../search/MovieSearch";
 
 export const MovieGrid = (props) => {
   const [movies, setMovies] = useState([]);
-
   const [page, setPage] = useState(1);
   const [totalPage, setTotalPages] = useState(0);
 
@@ -90,47 +89,5 @@ export const MovieGrid = (props) => {
         </div>
       ) : null}
     </>
-  );
-};
-
-const MovieSearch = (props) => {
-  const navigate = useNavigate();
-
-  const [keyword, setKeyword] = useState(props.keyword ? props.keyword : "");
-
-  const goToSearch = useCallback(() => {
-    if (keyword.trim().length > 0) {
-      navigate(`/${category[props.category]}/search/${keyword}`);
-    }
-  }, [keyword, navigate, props.category]);
-
-  useEffect(() => {
-    const enterEvent = (e) => {
-      e.preventDefault();
-
-      if (e.keyCode === 13) {
-        goToSearch();
-      }
-    };
-    document.addEventListener("keyup", enterEvent);
-
-    return () => {
-      document.removeEventListener("keyup", enterEvent);
-    };
-  }, [keyword, goToSearch]);
-
-  return (
-    <div className="movie-search">
-      <Input
-        type="text"
-        placeholder="Busca en goMovies..."
-        value={keyword}
-        onChange={(e) => setKeyword(e.target.value)}
-      />
-
-      <Button className="small" onClick={goToSearch}>
-        Buscar
-      </Button>
-    </div>
   );
 };

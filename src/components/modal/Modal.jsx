@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-/* import PropTypes from "prop-types"; */
+import PropTypes from "prop-types";
 import "../../scss/modal.scss";
 import { useRef } from "react";
 
@@ -29,12 +29,12 @@ export const ModalContent = (props) => {
     <div ref={contentRef} className="modal__content">
       {props.children}
       <div className="modal__content__close" onClick={closeModal}>
-          <i className="bx bx-x"></i>
+        <i className="bx bx-x"></i>
       </div>
     </div>
   );
 };
 
-/* ModalContent.propTypes = {
+ModalContent.propTypes = {
   onClose: PropTypes.func,
-}; */
+};
