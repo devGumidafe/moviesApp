@@ -1,4 +1,4 @@
-/* import PropTypes from "prop-types"; */
+import PropTypes from "prop-types";
 import "../../scss/button.scss";
 
 export const Button = (props) => {
@@ -23,9 +23,6 @@ export const OutlineButton = (props) => {
   );
 };
 
-/* Button.propTypes = {
-  onClick: PropTypes.func
-}; */
-
-
-
+Button.propTypes = {
+  onClick: PropTypes.func,
+};
